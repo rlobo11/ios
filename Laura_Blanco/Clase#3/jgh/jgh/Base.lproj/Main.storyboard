@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cZK-TL-e9l">
+            <objects>
+                <navigationController id="Uv3-MQ-Yk4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="75c-q2-teQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jjm-bs-xcM" kind="relationship" relationship="rootViewController" id="yOe-Be-ci0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0n-Yx-uRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="-597"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lig-cV-Klf">
+            <objects>
+                <viewController id="Jjm-bs-xcM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tFM-3j-tXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitcoin.svg" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-3W-Jwh">
+                                <rect key="frame" x="16" y="74" width="86" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eya-qe-J2l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAH-nl-REL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuB-Ua-bF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322.39999999999998" y="-590.55472263868069"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bitcoin.svg" width="240" height="240"/>
+    </resources>
+</document>
