@@ -9,6 +9,8 @@
 import UIKit
 
 class Acceso: UIViewController {
+    
+    var EsCorrecto : Bool = true
 
     @IBOutlet weak var txtNombre: UITextField!
     
@@ -21,6 +23,22 @@ class Acceso: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+  
+   
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return EsCorrecto
+    }
+    
+    @IBAction func btnAcceso(_ sender: UIButton) {
+       
+        
+        if txtNombre.text == "" {
+            EsCorrecto = false
+        }else{
+             EsCorrecto = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

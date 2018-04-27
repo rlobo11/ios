@@ -20,9 +20,10 @@ class CompraBitcoins: UIViewController {
     
    
     
+
     @IBOutlet weak var lblNombre: UILabel!
-    @IBOutlet weak var txtCantidad: UITextField!
     @IBOutlet weak var txtMonto: UITextField!
+    
     
     
     override func viewDidLoad() {
@@ -40,12 +41,9 @@ class CompraBitcoins: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         var Cantidad: String?
-        var Monto :  String?
-        var MontoPagar : String?
-        var Cambio: String?
+        
 
-        if segue.identifier == "Acceso"{
+        if segue.identifier == "Comprobante"{
             let Cantidad = segue.destination as? Comprobante
             let Monto = segue.destination as? Comprobante
             let MontoPagar = segue.destination as? Comprobante
@@ -78,29 +76,22 @@ class CompraBitcoins: UIViewController {
     @IBAction func btnComprar(_ sender: UIButton) {
         
         EsCorrecto = true
-    
-        if txtCantidad.text != "" {
-            vCantidad =  Int(txtCantidad.text!)!
-            if txtMonto.text != "" {
-                vMonto = Double(txtMonto.text!)!
-                Comprar()
-            }else{
-                print("Introduzca el monto con el que va a pagar.")
-                EsCorrecto = false
-            }
-            
-        }else {
-            print("Defina una cantidad")
+        
+        if txtMonto.text != "" {
+            vMonto = Double(txtMonto.text!)!
+            Comprar()
+        }else{
+            print("Introduzca el monto con el que va a pagar.")
             EsCorrecto = false
-        }
+            }
     }
     
     
     func Comprar (){
-    vMontoPagar = Double(vCantidad * cPrecioBitcoin)
+        vCantidad = Int(vMonto)/cPrecioBitcoin
+        vMontoPagar = Double(vCantidad * cPrecioBitcoin)
         
-        if vMonto >= vMontoPagar{
-            
+        if vMonto > vMontoPagar{
             vCambio = Cambio(pMonto: vMonto, pMontoPagar: vMontoPagar)
         }
     }
