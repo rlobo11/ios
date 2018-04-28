@@ -3,7 +3,7 @@
 //  BitCoin
 //
 //  Created by BCR on 24/4/18.
-//  Copyright © 2018 JCMA. All rights reserved.
+//  Copyright © 2018 . All rights reserved.
 //
 
 import UIKit
